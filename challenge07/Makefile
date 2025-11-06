@@ -9,7 +9,7 @@ $(TARGET): starter.c
 	$(CC) $(CFLAGS) -o $(TARGET) starter.c
 
 test: starter.c test_challenge07.c
-	$(CC) $(CFLAGS) -o $(TEST_TARGET) starter.c test_challenge07.c
+	$(CC) $(CFLAGS) -DTESTING -o $(TEST_TARGET) starter.c test_challenge07.c
 	./$(TEST_TARGET)
 
 clean:
