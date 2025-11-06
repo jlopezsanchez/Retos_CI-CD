@@ -10,18 +10,15 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-
+    runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      working-directory: ./challenge08/
+      working-directory: ./challenge07/
       run: make all
 
-
-  
-
-
+      
+    - name: Run tests
+      working-directory: ./challenge07/
+      run: make test
