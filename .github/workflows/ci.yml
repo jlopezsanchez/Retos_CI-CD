@@ -18,7 +18,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      working-directory: ./challenge08/
+      working-directory: ./challenge09/
       run: make all
 
 
