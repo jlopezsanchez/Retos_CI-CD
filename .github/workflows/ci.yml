@@ -11,10 +11,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    working-directory: ./challenge07/
+    
     steps:
     - uses: actions/checkout@v3
     - name: Build
+      working-directory: ./challenge07/
       run: make all
+
+      
     - name: Run tests
+      working-directory: ./challenge07/
       run: make test
